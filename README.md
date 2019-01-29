@@ -1,6 +1,6 @@
 # CustomEditor
 ### When do i need to use a custom editor
-If you need to display specials things in your script inspector or display specific variables, but separated by, an enum for example, the **Custom inspector** is for you
+If you need to display special things in your script inspector or display specific variables, but separated by, an enum for example, the **Custom inspector** is for you
 
 ### Example script
 
