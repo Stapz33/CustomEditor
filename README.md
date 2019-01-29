@@ -10,9 +10,12 @@ If you need to display special things in your script inspector or display specif
 
 using UnityEditor;   // Unity Editor API
 
-[CanEditMultipleObjects]  // Use it if you need to change values in multiple objects that have the same script.
-[CustomEditor(typeof(ButtonCall))]   // You say to your code : i create a custom editor for a script called "ButtonCall".
-public class ButtonCallEditor : Editor  // Use a class from "Editor" and not from "Mono behaviour".  [This is our Editor script]
+[CanEditMultipleObjects]  
+// Use it if you need to change values in multiple objects that have the same script.
+[CustomEditor(typeof(ButtonCall))]   
+// You say to your code : i create a custom editor for a script called "ButtonCall".
+public class ButtonCallEditor : Editor  
+// Use a class from "Editor" and not from "Mono behaviour".  [This is our Editor script]
 {
     ButtonCall cs_Script;  // You create a variable that will contain your script with his functions.
     private void OnEnable()
@@ -28,7 +31,8 @@ public class ButtonCallEditor : Editor  // Use a class from "Editor" and not fro
 
 
         Undo.RecordObject(target, "ButtonCall");    
-        // This function allows you to save the data you set in the inspector (naturally, it do not set your script "dirty" when you change a value).
+        // This function allows you to save the data you set in the inspector 
+        (naturally, it do not set your script "dirty" when you change a value).
 
         cs_Script.TypeOfButton = (ButtonType)EditorGUILayout.EnumPopup("Button Type", cs_Script.TypeOfButton); 
         // Show an enum popup on the inspector that contain our TypeOfButton from the function script.
